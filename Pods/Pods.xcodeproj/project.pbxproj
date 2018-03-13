@@ -20,7 +20,9 @@
 		2116618862F6436C3EC1E509E5D8A0A7 /* Pods-FDATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FDATests.debug.xcconfig"; sourceTree = "<group>"; };
 		2335991961AABF721055481D9F52A25D /* Pods-FDA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FDA.debug.xcconfig"; sourceTree = "<group>"; };
 		24509273E13D72D3E2F2F58FB15AED1C /* Pods-FDATests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FDATests-dummy.m"; sourceTree = "<group>"; };
+		275DEAAB07AB38756C25FF9F36046103 /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = "AppCenter-SDK-Apple/iOS/AppCenter.framework"; sourceTree = "<group>"; };
 		4F5DE0D704FD0EB711B0914DEF382DEA /* Pods-FDATests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FDATests.modulemap"; sourceTree = "<group>"; };
+		5351CBD2DE9358535B624F45830298EA /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterAnalytics.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterAnalytics.framework"; sourceTree = "<group>"; };
 		5DD3157DE7B1823C9B22D13C60276BF0 /* Pods-FDATests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FDATests-acknowledgements.plist"; sourceTree = "<group>"; };
 		6147E2ADA6D003CF2723D6A75515A5E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -28,6 +30,7 @@
 		8E900F69B74EE0FF35DB886576AC2C81 /* Pods-FDATests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FDATests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F7AE3E291A904A3BA36A48E6E7B3B7E /* Pods-FDA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FDA-dummy.m"; sourceTree = "<group>"; };
+		BD267D828AE1E034D07B6E89399D3E89 /* AppCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterCrashes.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterCrashes.framework"; sourceTree = "<group>"; };
 		BFC948CC2494A1E8B7214FEF9A848F07 /* Pods-FDA-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FDA-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C198032E09ECE55811284ABED31ED89A /* Pods-FDA-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FDA-acknowledgements.plist"; sourceTree = "<group>"; };
 		C1DBAC70D71873C220AC76DBDC2D2F51 /* Pods-FDA-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FDA-frameworks.sh"; sourceTree = "<group>"; };
@@ -62,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F08D6AAC5F3212BEF9AE67BA27BB985 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26382BECC33D3A0DB32AEEFB179E5805 /* AppCenter */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2351BF659FCA378933C327ED3BAC5A8C /* Pods-FDA */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +100,25 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		26382BECC33D3A0DB32AEEFB179E5805 /* AppCenter */ = {
+			isa = PBXGroup;
+			children = (
+				532FCA275C043189A13FDDD5A9BDE415 /* Analytics */,
+				9EE13F7E6DB656EA069185A561AFA2DE /* Core */,
+				7887D30DE6098B8B49964BA5EDB1C9D5 /* Crashes */,
+			);
+			name = AppCenter;
+			path = AppCenter;
+			sourceTree = "<group>";
+		};
+		532FCA275C043189A13FDDD5A9BDE415 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				A4258E8EA78F9E8E72A5B6E20E8F43D6 /* Frameworks */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
 		61AE1C7ADBD51BAABAAA4E9CCF507144 /* Pods-FDATests */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,11 +137,28 @@
 			path = "Target Support Files/Pods-FDATests";
 			sourceTree = "<group>";
 		};
+		66122652B1024E946ECEA52DFABA11A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD267D828AE1E034D07B6E89399D3E89 /* AppCenterCrashes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7887D30DE6098B8B49964BA5EDB1C9D5 /* Crashes */ = {
+			isa = PBXGroup;
+			children = (
+				66122652B1024E946ECEA52DFABA11A7 /* Frameworks */,
+			);
+			name = Crashes;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				0F08D6AAC5F3212BEF9AE67BA27BB985 /* Pods */,
 				8B25258281F520C3183A99D23163C2A6 /* Products */,
 				24B96F5FFAB9A93CB25CF8FBD566DB5F /* Targets Support Files */,
 			);
@@ -124,6 +171,22 @@
 				7DEA90E8959B47C20E04DC5DDFF8B7A3 /* Pods_FDATests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9EE13F7E6DB656EA069185A561AFA2DE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E39FB8A4CA783BA2FB45AFE8CCE436C4 /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		A4258E8EA78F9E8E72A5B6E20E8F43D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5351CBD2DE9358535B624F45830298EA /* AppCenterAnalytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -140,6 +203,14 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		E39FB8A4CA783BA2FB45AFE8CCE436C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				275DEAAB07AB38756C25FF9F36046103 /* AppCenter.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
